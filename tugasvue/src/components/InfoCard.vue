@@ -2,8 +2,8 @@
     <div>
         <router-link to="/add" class="btn btn-primary m-2" v-show="!viewForm">Add Data</router-link>
         <div class="container-fluid">
-            <div class="d-flex flex-wrap" v-if="!viewForm">
-              <div id="card" class="card col-lg-4 p-2"  v-for="(item ,index) in dataStudent" :key="item.id">
+            <div class="d-flex flex-wrap justify-content-center" v-if="!viewForm">
+              <div id="card" class="card col-lg-4 m-2 p-2"  v-for="(item ,index) in dataStudent" :key="item.id">
                 <small v-show="none">{{(index + 1)}}</small>
                   <p style="font-size:larger">{{item.nama}} , {{item.umur + " "}}Years old</p>
                   <p>{{item.deskripsi_diri}}</p>
@@ -101,6 +101,5 @@ export default {
 #card {
     border: 2px solid rgb(220, 220, 220);
     border-radius: 15px;
-    margin:5px ;
 }
 </style>
