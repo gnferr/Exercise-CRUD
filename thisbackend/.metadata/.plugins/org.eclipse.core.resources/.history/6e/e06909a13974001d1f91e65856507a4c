@@ -1,0 +1,5 @@
+package com.dovahkin.repository;
+
+public interface IStudentRepository {
+
+}

@@ -1,0 +1,49 @@
+package com.dovahkin.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dovahkin.model.Student;
+import com.dovahkin.repository.IStudentRepository;
+import com.dovahkin.repository.implement.StudentRepository;
+import com.dovahkin.service.IStudentService;
+
+@Service
+public class StudentService implements IStudentService {
+
+	@Autowired
+	IStudentRepository studentRepository;
+	
+	@Override
+	public Student insertStudent(Student student) {
+		// TODO Auto-generated method stub
+		return studentRepository.insertStudent(student);
+	}
+
+	@Override
+	public List<Student> getAll() {
+		// TODO Auto-generated method stub
+		return studentRepository.getAll();
+	}
+
+	@Override
+	public Student updateStudent(long id, Student student) {
+		// TODO Auto-generated method stub
+		return studentRepository.updateStudent(id, student);
+	}
+
+	@Override
+	public Student deleteStudent(long id) {
+		// TODO Auto-generated method stub
+		return studentRepository.deleteStudent(id);
+	}
+
+	@Override
+	public Student getById(long id) {
+		// TODO Auto-generated method stub
+		return studentRepository.getById(id);
+	}
+	
+}

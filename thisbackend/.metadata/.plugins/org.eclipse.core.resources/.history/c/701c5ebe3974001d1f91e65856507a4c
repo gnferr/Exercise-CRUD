@@ -1,0 +1,5 @@
+package com.dovahkin.repository.implement;
+
+public class StudentRepository {
+
+}
